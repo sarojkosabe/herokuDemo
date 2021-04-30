@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
+    <!-- <script type="text/javascript" src="/static/js/jquery.convform.js"></script> -->
+    <!-- <script type="text/javascript" src="/static/js/custom.js"></script> -->
+    <style>
+        body {
+            font-family: monospace;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #chatbox {
+            width: 100%;
+            margin-top: 5px;
+            overflow: auto;
+            height: 60vh;
+            /* position: fixed; */
+        }
+        
+        #userInput {
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            margin-top: 10px;
+        }
+        
+        #textInput {
+            /* width: 90%; */
+            border: none;
+            border-bottom: 3px solid black;
+            font-family: 'Alegreya';
+            font-size: 17px;
+        }
+        
+        .userText {
+            /* margin-left: 50%; */
+            margin-right: 2%;
+            color: white;
+            background-color: #4b6777;
+            font-family: 'Alegreya';
+            font-size: 17px;
+            /* text-align: left; */
+            line-height: 30px;
+            border-radius: 5px;
+            float: right;
+            /* border-top-right-radius: 0; */
+            max-width: 65%;
+            clear: both;
+            margin-bottom: 5px;
+        }
+        
+        .userText span {
+            padding: 10px;
+            border-radius: 5px;
+            right: 2px;
+        }
+        
+        .botText {
+            color: black;
+            background-color: lightblue;
+            font-family: 'Alegreya';
+            font-size: 17px;
+            /* text-align: left; */
+            line-height: 30px;
+            float: left;
+            border-top-left-radius: 0;
+            max-width: 65%;
+            clear: both;
+            margin-bottom: 5%;
+            border-radius: 5px;
+            margin-left: 2%;
+            /* margin-right: 50%; */
+        }
+        
+        .chat_box {
+            width: 400px;
+            height: 80vh;
+            position: absolute;
+            bottom: 100px;
+            right: 30px;
+            background: white;
+            z-index: 1000;
+            transition: all 0.3s ease-out;
+            transform: scaleY(0);
+            /* overflow: scroll; */
+            border-color: black;
+            border-style: solid;
+            border-width: thin;
+        }
+        
+        .botText span {
+            padding: 10px;
+            border-radius: 5px;
+            left: 2px;
+        }
+        /* .boxed {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            margin-top: 60px;
+            border-radius: 5px;
+        } */
+        
+        input[type=text] {
+            bottom: 1px;
+            width: 80%;
+            height: 30Px;
+            /* padding: 12px 20px; */
+            margin: 8px 0;
+            /* box-sizing: border-box; */
+            position: absolute;
+            /* border-radius: 5px; */
+            left: 2%;
+        }
+        
+        #send-btn {
+            height: 37px;
+            bottom: 2%;
+            right: 2%;
+            position: fixed;
+            margin-top: 52%;
+            width: 13%;
+            top: 51%;
+        }
+        
+        .header h2 {
+            display: inline-block;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            padding-left: 35%;
+        }
+        
+        .typing-field {
+            margin-top: 4px;
+            margin-bottom: 6px;
+            height: 10%;
+            width: 100%;
+            background-color: whitesmoke;
+            position: fixed;
+            border-top: 1px solid;
+            top: 88%;
+        }
+        
+        .chat_icon {
+            position: fixed;
+            bottom: 0;
+            right: 30px;
+            z-index: 1000;
+            padding: 0;
+            font-size: 80px;
+            color: blue;
+            cursor: pointer;
+        }
+        
+        .header {
+            overflow: hidden;
+            background-color: blue;
+            display: inline-block;
+            /* padding: 10px 10px; */
+            width: 100%;
+        }
+        
+        .gitImg {
+            width: 80px;
+            height: 50px;
+        }
+        
+        .chat_box.active {
+            transform: scaleY(1);
+        }
+        
+        #messages {
+            padding: 20px;
+        }
+        
+        .my-conv-form-wrapper input[type="text"] {
+            height: 40px;
+            overflow: hidden;
+            resize: none;
+            width: 280px;
+        }
+        
+        .my-conv-form-wrapper button {
+            height: 40px;
+            overflow: hidden;
+            resize: none;
+            width: 60px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat_icon">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+        <!-- <i class="fa fa-facebook-messenger"></i> -->
+    </div>
+    <div class="chat_box">
+        <div class="my-conv-form-wrapper">
+            <div class="header">
+                <h2>GIT ChatBot</h2>
+            </div>
+        </div>
+        <div id="chatbox">
+            <div class="botText">Hello! How can I Help You</div>
+        </div>
+        <div class="typing-field">
+            <div id="userInput">
+                <input id="nameInput" type="text" name="msg" placeholder="Type here" />
+                <button id="send-btn" type="submit" onclick="javascript:getBotResponse();" value="submit">Send</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getBotResponse() {
+            var rawText = $("#nameInput").val();
+            var userHtml = '<div class="userText"><span>' + rawText + "</span></div>";
+            $("#nameInput").val("");
+            $("#chatbox").append(userHtml);
+            document
+                .getElementById("userInput")
+                .scrollIntoView({
+                    block: "start",
+                    behavior: "smooth"
+                });
+            $.get("/get", {
+                msg: rawText
+            }).done(function(data) {
+                var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                $("#chatbox").append(botHtml);
+                document
+                    .getElementById("userInput")
+                    .scrollIntoView({
+                        block: "start",
+                        behavior: "smooth",
+
+                    });
+            });
+        }
+        $("#nameInput").keypress(function(e) {
+            if (e.which == 13) {
+                e.preventDefault();
+                document.getElementById("send-btn").click();
+                // getBotResponse();
+            }
+        });
+
+
+        $(document).ready(function() {
+            $('.chat_icon').click(function() {
+                $('.chat_box').toggleClass('active');
+            });
+
+            // $('.my-conv-form-wrapper').convform({selectInputStyle: 'disable'})
+        });
+        $(document).ready(function() {
+            $("#send-btn").on("click", function() {
+                $value = $("#data").val();
+                $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>' + $value + '</p></div></div>';
+                $(".form").append($msg);
+                $("#data").val('');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
