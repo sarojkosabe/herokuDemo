@@ -1,0 +1,409 @@
+{
+    "intents": [{
+            "tag": "greeting",
+            "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+            "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Hey there!"],
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later", "Goodbye"],
+            "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."],
+            "context_set": ""
+        },
+        {
+            "tag": "bank",
+            "patterns": ["which bank/atm near to git?", "which ATM is near to git college?"],
+            "responses": ["sarswat co-opertive bank", "sarswat ATM"],
+            "context_set": ""
+        },
+        {
+            "tag": "head of department computer",
+            "patterns": ["who is hod of computer department?", "head of computer department?", "hod of computer department"],
+            "responses": ["Prof. R.R.Bane is a hod of computer department"],
+            "context_set": ""
+        },
+        {
+            "tag": "head of department chemical",
+            "patterns": ["who is hod of chemical department?", "head of chemical department?", "hod of chemical department"],
+            "responses": ["Dr.V.D.Talnekar is a hod of chemical department"],
+            "context_set": ""
+        },
+        {
+            "tag": "head of department civil",
+            "patterns": ["who is hod of civil department?", "head of civil department?", "hod of civil department"],
+            "responses": ["Prof. G.D.Parulekar is a hod of civil department"],
+            "context_set": ""
+        },
+        {
+            "tag": "head of department E&TC",
+            "patterns": ["who is hod of E&TC department?", "head of E&TC department?", "hod of E&TC department"],
+            "responses": ["Dr.S.R.Khedekar is a hod of extc department"],
+            "context_set": ""
+        },
+        {
+            "tag": "head of department mechanical",
+            "patterns": ["who is hod of mechanical department?", "head of mechanical department?", "hod of mechanical department"],
+            "responses": ["Dr.B.A.Dhanawade is a hod of mechanical department"],
+            "context_set": ""
+        },
+        {
+            "tag": "principal",
+            "patterns": ["who is principal of gharda institute of technology?", "who is principal of git?", "principal"],
+            "responses": ["Dr.Promod.S.Joshi is a principal"]
+        },
+        {
+            "tag": "library",
+            "patterns": ["who is librarian of git?"],
+            "responses": [" Mr.sunil joshi is a librarian of git"]
+        },
+        {
+            "tag": "library Time",
+            "patterns": ["what is the opening time of library?"],
+            "responses": [" opening time of library is 9:00 AM to 9:00PM "]
+        },
+        {
+            "tag": "address",
+            "patterns": ["address of gharda institute of technology?", "where is git college?", "address"],
+            "responses": ["Mumbai - Goa Highway, Dabhil Naka, Ratnagiri District, Lavel, Maharashtra 415708 "]
+
+        },
+        {
+            "tag": " college contact",
+            "patterns": ["contact number of college?"],
+            "responses": ["contact number of college is 02356-262795 to 99"]
+        },
+        {
+            "tag": "founder",
+            "patterns": ["who is the founder of git?", "founder"],
+            "responses": ["Padma Shree Dr. K.H. Gharda is a founder of git"]
+        },
+        {
+            "tag": " registrar",
+            "patterns": ["who is the registrar of git?", "registrar"],
+            "responses": ["prof.Mangesh Gadre  is a registrar of git"]
+        },
+        {
+            "tag": "TPO",
+            "patterns": ["Who is the TPO of git?", "tpo", "Training and Placement Officer  of college", "tpo of college"],
+            "responses": ["Sandip  Magdum is TPO of GIT"],
+            "context_set": ""
+        },
+        {
+            "tag": "sport day",
+            "patterns": ["which type of game play in sport day?"],
+            "responses": ["kho-kho,Dodge ball,cricket,volley ball,kabaddi"],
+            "context_set": ""
+        },
+        {
+            "tag": "Event",
+            "patterns": ["name of event", "which cultural activity taken by college"],
+            "responses": ["shodh,synergy,shivjayanti,garba night,maghi ganesjayanti,gudhipadwa"],
+            "context_set": ""
+        },
+        {
+            "tag": "ASCEE",
+            "patterns": ["what is fullform of ASCEE", "ASCEE stands for", "full form of ASCEE", "ASCEE", "what is ASCEE"],
+            "responses": ["Association of Students of Computer Engineering for Excellence"],
+            "context_set": ""
+
+        },
+        {
+            "tag": " ascee staff co-ordinator",
+            "patterns": ["who is ascee  staff co-ordinator", "ascee staff co-ordinator", "staff co-ordinator of ascee", "who is ascee  staff coordinator"],
+            "responses": ["Prof.Rajkumar Pawar"],
+            "context_set": ""
+        },
+        {
+            "tag": " ascee president",
+            "patterns": ["who is ascee  president", "ascee  president", "president of ASCEE", "who is ascee president"],
+            "responses": ["Paras goriwale"],
+            "context_set": ""
+        },
+        {
+            "tag": "ascee Secretary",
+            "patterns": ["who is ascee Secretary", "ascee Secretary", "Secretary of ASCEE", "who is ascee Secretary "],
+            "responses": ["omshree dalvi"],
+            "context_set": ""
+        },
+        {
+            "tag": "CASTLE",
+            "patterns": ["what is fullform of CASTLE", "CASTLE stands for", "full form of CASTLE", "CASTLE", "what is CASTLE"],
+            "responses": ["Civil Association of Students for Technically Leading Engineers"],
+            "context_set": ""
+        },
+        {
+            "tag": "castle Secretary",
+            "patterns": ["who is castle Secretary", "castle Secretary", "Secretary of castle", "who is castel Secretary"],
+            "responses": ["Saud Dabhilkar"],
+            "context_set": ""
+        },
+        {
+            "tag": "castle president",
+            "patterns": ["who is castle President", " castle President", "president of castle", "who is castel President"],
+            "responses": ["Siddhesh Mhaske"],
+            "context_set": ""
+        },
+        {
+            "tag": "PULSE",
+            "patterns": ["what is fullform of PULSE", "PULSE stands for", "fullform of PULSE", "PULSE", "what is PULSE"],
+            "responses": ["Pioneer Union for Lighting the Science of Engineering"],
+            "context_set": ""
+        },
+        {
+            "tag": "pulse president",
+            "patterns": ["who is pulse President", " pulse President", "president of pulse", "who is pulse President"],
+            "responses": ["vedant mahadik"],
+            "context_set": ""
+        },
+        {
+            "tag": "pulse Secretary",
+            "patterns": ["who is pulse Secretary", "pulse Secretary", "Secretary of pulse", "who is pulse Secretary"],
+            "responses": ["Mrunal katkar"],
+            "context_set": ""
+        },
+        {
+            "tag": "college Activity",
+            "patterns": ["which induction activities taken by college"],
+            "responses": ["orientation program, mentoring, dignostic test, familiarization depatment and institute,physical activity and yoga,universal human value,proficiency module"],
+            "context_set": ""
+        },
+        {
+            "tag": " Railway station",
+            "patterns": ["nearest railway station", "name of nearest railway station", "nearest railway station from college", "railway station"],
+            "responses": ["khed,chiplun"],
+            "context_set": ""
+        },
+
+        {
+            "tag": "hostel",
+            "patterns": ["hostel facility is available in college area", "hostel name", "hostel,"],
+            "responses": ["Girls hostel-ajinkyatara ,Boys hostel-raigad and shivnere"],
+            "context_set": ""
+        },
+        {
+            "tag": "hostel facility",
+            "patterns": ["which facility is available in hostel", "girls and boys hostel facility"],
+            "responses": ["internet connection, parking lot, mess, solar hitter, bathrooms, gym, badminton court,24 houre electricity"],
+            "context_set": ""
+        },
+        {
+            "tag": "hostel capacity",
+            "patterns": ["how many student can stay in a hostel at a time", "student capacity in hostel"],
+            "responses": ["530 Boys and 220 Girls"],
+            "context_set": ""
+        },
+        {
+            "tag": "hostel room price",
+            "patterns": ["how much cost for hostel rooms", "cost for hostel rooms", "rent for hostel rooms", "cost room", "hostel price"],
+            "responses": [" 4students in 1 room-14000, 3students in 1 room-16000, 2students in 1 room-18000"],
+            "context_set": ""
+        },
+        {
+            "tag": "NAAC",
+            "patterns": ["what is naac", "NAAC", "nacc grade"],
+            "responses": ["the National Assessment and Accreditation Council has accredited GIT with B+ grade"],
+            "context_set": ""
+        },
+
+        {
+            "tag": "IQAC",
+            "patterns": ["full form of IQAC", "IQAC"],
+            "responses": ["Insttutional quality assurance cell"],
+            "context_set": ""
+        },
+        {
+            "tag": "UMA",
+            "patterns": ["full form of uma", " UMA"],
+            "responses": [" full form of UMA is unnat maharashtra abbhiyan."],
+            "context_set": ""
+        },
+        {
+            "tag": "UMA objective",
+            "patterns": ["objective of uma", "what is uma"],
+            "responses": ["Institute shares UMA’s concern about making ongoing research in engineering colleges,polytechnics, and other higher education institutes in Maharashtra more public-oriented by analyzing various day-to-day social and developmental problems in the state "],
+            "context_set": ""
+        },
+        {
+            "tag": "UMA projects",
+            "patterns": ["projects of uma", "name of uma projects", "uma projects"],
+            "responses": ["1.Post analysis of geometric design on Khed-Chiplun Highway (N.H.-66),2.Use of Plastic Waste in Road construction,3.Rural Water Supply scheme(Dalvatne 1 Lakh liters Capacity) Assessment,4.Development of Crime reporting system for Mandangad Police station,5.Collection and reuse of Coconut shells : Bio fertilizer"],
+            "context_set": ""
+        },
+        {
+            "tag": "Institutional Values & Best Practices",
+            "patterns": ["which Institutional Values & Best Practices available in college "],
+            "responses": ["#Specific Facilities provided for Women,#Annual Gender Sensitization Plan,#Institution has Facilities for alternate sources of energy and energy conservation measures,#Facilities in the Institution for the Waste Management,#Water Conservation Facilities"],
+            "context_set": ""
+        },
+        {
+            "tag": "woman facilities",
+            "patterns": ["which facilities provided for woman in collge ", "woman facilities"],
+            "responses": ["Safety and Security,Counseling,Girls Common Room,Day Care Center for Young Children"],
+            "context_set": ""
+        },
+        {
+            "tag": "energy conservation ",
+            "patterns": ["which energy conservation facilities provided by college", "energy conservation plant", "alternate sources of energy"],
+            "responses": ["Solar Energy,Bio Gas Plant,Sensor based Energy Conservation,Use of LED bulbs and power efficient equipments"],
+            "context_set": ""
+        },
+        {
+            "tag": "Waste Management",
+            "patterns": ["which type of waste management facilities available in college", "waste management facilities"],
+            "responses": ["Organic Waste Convertor,BIOFILTER Plant , E-waste treatment plant. "],
+            "context_set": ""
+        },
+        {
+            "tag": "Institute Memberships",
+            "patterns": ["Institute Memberships"],
+            "responses": ["#AICTE Approval,#The Institution Of Engineeres Membership,#Institution of Chemical Engineeres Membership,#Institution Innovation Cell Certificate,#NAAC Certificate of Accreditation,#Indian Society For Technical Education(ISTE) Membership"],
+            "context_set": ""
+        },
+        {
+            "tag": "woman facilities",
+            "patterns": ["which facilities provided for woman in collge ", "woman facilities"],
+            "responses": ["Safety and Security,Counseling,Girls Common Room,Day Care Center for Young Children"],
+            "context_set": ""
+        },
+        {
+            "tag": "energy conservation ",
+            "patterns": ["which energy conservation facilities provided by college", "energy conservation plant", "alternate sources of energy"],
+            "responses": ["Solar Energy,Bio Gas Plant,Sensor based Energy Conservation,Use of LED bulbs and power efficient equipments"],
+            "context_set": ""
+        },
+        {
+            "tag": "Waste Management",
+            "patterns": ["which type of waste management facilities available in college", "waste management facilities"],
+            "responses": ["Organic Waste Convertor,BIOFILTER Plant , E-waste treatment plant. "],
+            "context_set": ""
+        },
+        {
+            "tag": "Institute Memberships",
+            "patterns": ["Institute Memberships"],
+            "responses": ["#AICTE Approval,#The Institution Of Engineeres Membership,#Institution of Chemical Engineeres Membership,#Institution Innovation Cell Certificate,#NAAC Certificate of Accreditation,#Indian Society For Technical Education(ISTE) Membership"],
+            "context_set": ""
+
+        },
+        {
+            "tag": "Vision Statement",
+            "patterns": ["vision Statement of college", "vision Statement"],
+            "responses": ["To play a distinct role in transforming individuals in to Engineering professionals for betterment of society"],
+            "context_set": ""
+        },
+        {
+            "tag": "Mission Statement",
+            "patterns": ["Mission Statement", "mission statement of college"],
+            "responses": ["#Develop skills to apply knowledge to profession for betterment of society.#Impart knowledge through relevant curricula.#Create awareness and understanding of continuous learning."],
+            "context_set": ""
+        },
+        {
+            "tag": "intake",
+            "patterns": ["intake of student in every branch", "intake of student", "intake"],
+            "responses": ["69 Seats : [60(CAP+IL)+3TFWS+6EWS]+ 6[DSE]"],
+            "context_set": ""
+        },
+        {
+            "tag": "E-Learning",
+            "patterns": ["e-learning resources", "E-Learning"],
+            "responses": ["SWAYAM,Massive Open Online Courses (MOOCs),NPTEL,E-Learning resource center(ELRC) "],
+            "context_set": ""
+        },
+        {
+            "tag": "Services",
+            "patterns": ["which type of services provided by college", "college services", " which Facilities provided by college"],
+            "responses": ["computer center,eLearning center,language lab,medical facility,transport facility,gymkhana,wifi & video conferencing,consumer CoOp store,bank&post"],
+            "context_set": ""
+        },
+        {
+            "tag": "GIT",
+            "patterns": ["full form of git", "git", "full name of college"],
+            "responses": ["gharda institute of technology"],
+            "context_set": ""
+        },
+        {
+            "tag": "cultural committee",
+            "patterns": ["chairperson of cultural committee", "who is chairperson of cultural committee", "chairperson"],
+            "responses": ["Prof. Tathare S.S."],
+            "context_set": ""
+        },
+        {
+            "tag": "Imp Contact Numbers",
+            "patterns": [" important contact number of college", "important contact number"],
+            "responses": ["# Exam: Mr. Palekar 8149444480 / Mr. Jadhav 9423951188 ,#Academics: Mr. Gurav 9822765402, #WiFi-Internet: Mr. Shirgaonkar 8275262754 / Mr. Kubade 7588482307 ,#Counselor: Mr. Jadhav 9561931427 ,#Email, Website, Social Sites: Mr. Salunkhe 9405595075, #Hostel, Sports: Mr. Bole 9921877334"],
+            "context_set": ""
+        },
+        {
+            "tag": "bus stand",
+            "patterns": ["nearest bus stand", "nearest bus stand from college", "bus stand", "nearest bus station", "nearest bus stationfrom college"],
+            "responses": ["dabhil naka-1.5km,khed-17km,chiplun-25km"],
+            "context_set": ""
+        },
+        {
+            "tag": "airport",
+            "patterns": ["nearest airport", " nearest airport from college", "airport"],
+            "responses": ["mumbai-250km"],
+            "context_set": ""
+        },
+        {
+            "tag": "how to reach",
+            "patterns": ["how to reach college"],
+            "responses": ["git is well connected to mumbai and most of the place by road through N.H.NO.66(mumbai-goa highway)and by rails through konkan railway"],
+            "context_set": ""
+        },
+        {
+            "tag": "canteen & mess",
+            "patterns": ["canteen & mess", "the canteen is available at the college"],
+            "responses": ["Meet'n'eat & Anna's Den"],
+            "context_set": ""
+        },
+        {
+            "tag": "mess deposit",
+            "patterns": ["mess deposit for hostel student", "mess deposit"],
+            "responses": ["3000"],
+            "context_set": ""
+        },
+        {
+            "tag": " total staff",
+            "patterns": ["total no of staff in college?", "number of staff", "total staff", "total teaching staff"],
+            "responses": ["62"],
+            "context_set": ""
+        },
+        {
+            "tag": "type of institution",
+            "patterns": ["type of institution"],
+            "responses": ["private-self financed"],
+            "context_set": ""
+        },
+        {
+            "tag": "address of organisation",
+            "patterns": ["address of organisation"],
+            "responses": ["gharda house,48,hill road,bandra(west),mumbai-50"],
+            "context_set": ""
+        },
+        {
+            "tag": "campus area",
+            "patterns": ["campus area"],
+            "responses": ["23 Acres"],
+            "context_set": ""
+        },
+        {
+            "tag": "hospital",
+            "patterns": ["nearest hospital", "which hospital is near to the college", "nearest hospital to college", "hospital"],
+            "responses": ["Bai Ratanbai Gharda Hospital At Post Lavel, Tal - Khed Dist - Ratnagiri, MAHARASHTRA Pin - 415708"],
+            "context_set": ""
+        },
+
+        {
+            "tag": "wifi facility",
+            "patterns": ["wifi is available in college", "is there WiFi Facility in the college", "The college has wifi facility"],
+            "responses": ["WiFi facility is available in the college", "yes,WiFi facility is available in the college"],
+            "context_set": ""
+        }
+
+
+
+
+
+    ]
+}
